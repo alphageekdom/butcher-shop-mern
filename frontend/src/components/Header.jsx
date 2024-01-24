@@ -1,4 +1,5 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 
 const Header = () => {
@@ -6,16 +7,22 @@ const Header = () => {
     <header>
       <Navbar bg='dark' variant='dark' expand='md' collapseOnSelect>
         <Container>
-          <Navbar.Brand href='/'>ButcherShop</Navbar.Brand>
+          <LinkContainer to={'/'}>
+            <Navbar.Brand>ButcherShop</Navbar.Brand>
+          </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <Nav.Link href='/cart'>
-                <FaShoppingCart />
-              </Nav.Link>
-              <Nav.Link href='/login'>
-                <FaUser />
-              </Nav.Link>
+              <LinkContainer to='/cart'>
+                <Nav.Link>
+                  <FaShoppingCart />
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/login'>
+                <Nav.Link>
+                  <FaUser />
+                </Nav.Link>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>

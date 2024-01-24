@@ -11,7 +11,7 @@ const Product = ({ product }) => {
           variant='top'
           width={300}
           height={300}
-          style={{ 'object-fit': 'cover' }}
+          style={{ objectFit: 'cover' }}
           loading='lazy'
         />
       </Link>

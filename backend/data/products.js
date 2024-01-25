@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'T-Bone Steak',
     image: '/images/t-bone.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'Brisket',
     image: '/images/brisket.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Sirloin',
     image: '/images/sirloin.jpg',
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'Tomahawk',
     image: '/images/tomahawk.jpg',
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Chicken Breast',
     image: '/images/chicken-breast.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'Chicken Tenders',
     image: '/images/chicken-tenders.jpg',
     description:
@@ -78,7 +72,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '7',
     name: 'Chicken Nuggets',
     image: '/images/chicken-nuggets.jpg',
     description:
@@ -91,7 +84,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '8',
     name: 'Buffalo Wings',
     image: '/images/buffalo-wings.jpg',
     description:
@@ -104,7 +96,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '9',
     name: 'Bacon',
     image: '/images/bacon.jpg',
     description:
@@ -117,7 +108,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '10',
     name: 'Ham',
     image: '/images/ham.jpg',
     description:
@@ -130,7 +120,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '11',
     name: 'Al Pastor',
     image: '/images/al-pastor.jpg',
     description:
@@ -143,7 +132,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '12',
     name: 'Pork Chop',
     image: '/images/pork-chop.jpg',
     description:

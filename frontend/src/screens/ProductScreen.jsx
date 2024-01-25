@@ -4,6 +4,7 @@ import Rating from '../components/Rating';
 import { FaArrowLeft } from 'react-icons/fa';
 import { useGetProductDetailsQuery } from '../slices/productsApiSlice';
 import Loader from '../components/Loader';
+import Message from '../components/Message';
 
 function ProductScreen() {
   const { id: productId } = useParams();
@@ -23,7 +24,9 @@ function ProductScreen() {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <div>{error?.data?.message || error.error}</div>
+        <Message variant='danger'>
+          {error?.data?.message || error.error}
+        </Message>
       ) : (
         <>
           <Row>

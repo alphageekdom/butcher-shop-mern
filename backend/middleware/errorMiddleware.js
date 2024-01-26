@@ -10,7 +10,7 @@ const errorHandler = (err, req, res, next) => {
 
   //   Check for bad MongoDB id
   if (err.name === 'CastError' && err.kind === 'ObjectId') {
-    message = `Resource not found`;
+    message = `Resource Not Found`;
     statusCode = 404;
   }
 

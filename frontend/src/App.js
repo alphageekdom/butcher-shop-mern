@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import PrivateRoute from './components/PrivateRoute';
+
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
@@ -26,7 +28,10 @@ const App = () => {
               <Route path='/cart' element={<CartScreen />} />
               <Route path='/login' element={<LoginScreen />} />
               <Route path='/register' element={<RegisterScreen />} />
-              <Route path='/shipping' element={<ShippingScreen />} />
+
+              <Route path='' element={<PrivateRoute />}>
+                <Route path='/shipping' element={<ShippingScreen />} />
+              </Route>
             </Routes>
           </Container>
         </main>

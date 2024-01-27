@@ -39,7 +39,9 @@ function ProductScreen() {
   return (
     <>
       <Link className='btn btn-light my-3' to={'/'}>
-        <FaArrowLeft /> Go Back
+        <span style={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+          <FaArrowLeft /> Go Back
+        </span>
       </Link>
 
       {isLoading ? (

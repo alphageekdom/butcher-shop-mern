@@ -16,6 +16,7 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import OrderScreen from './screens/OrderScreen';
 
 const App = () => {
   return (
@@ -31,10 +32,12 @@ const App = () => {
               <Route path='/login' element={<LoginScreen />} />
               <Route path='/register' element={<RegisterScreen />} />
 
+              {/* Registered User Routes */}
               <Route path='' element={<PrivateRoute />}>
                 <Route path='/shipping' element={<ShippingScreen />} />
                 <Route path='/payment' element={<PaymentScreen />} />
                 <Route path='/placeorder' element={<PlaceOrderScreen />} />
+                <Route path='/order/:id' element={<OrderScreen />} />
               </Route>
             </Routes>
           </Container>

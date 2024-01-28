@@ -23,6 +23,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import OrderListScreen from './screens/admin/OrderListScreen';
 import ProductListScreen from './screens/admin/ProductListScreen';
 import ProductEditScreen from './screens/admin/ProductEditScreen';
+import UserListScreen from './screens/admin/UserListScreen';
 
 const App = () => {
   return (
@@ -62,6 +63,7 @@ const App = () => {
                     path='/admin/product/:id/edit'
                     element={<ProductEditScreen />}
                   />
+                  <Route path='/admin/userList' element={<UserListScreen />} />
                 </Route>
               </Routes>
             </Container>

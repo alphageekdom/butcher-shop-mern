@@ -87,7 +87,7 @@ const PlaceOrderScreen = () => {
                         </Col>
                         <Col>
                           <h6 className='mb-0'>Item</h6>
-                          <Link to={`/products/${item._id}`}>{item.name}</Link>
+                          <Link to={`/product/${item._id}`}>{item.name}</Link>
                         </Col>
                         <Col md={1}>
                           <h6 className='mb-0'>Qty</h6>

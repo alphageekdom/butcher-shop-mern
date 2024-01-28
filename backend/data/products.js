@@ -137,7 +137,7 @@ const products = [
     description:
       'Savor the exceptional taste of our succulent pork chops, carefully sourced and hand-cut for maximum flavor and tenderness. Whether grilled to perfection or pan-seared to a golden crust, our pork chops deliver a juicy, mouthwatering experience that elevates your dining enjoyment.',
     brand: 'Free Range',
-    category: 'Poultry',
+    category: 'Pork',
     price: 7.99,
     countInStock: 0,
     rating: 4,

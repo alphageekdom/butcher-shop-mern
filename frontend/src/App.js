@@ -21,6 +21,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrderListScreen from './screens/admin/OrderListScreen';
+import ProductListScreen from './screens/admin/ProductListScreen';
 
 const App = () => {
   return (
@@ -51,6 +52,10 @@ const App = () => {
                   <Route
                     path='/admin/orderList'
                     element={<OrderListScreen />}
+                  />
+                  <Route
+                    path='/admin/productList'
+                    element={<ProductListScreen />}
                   />
                 </Route>
               </Routes>

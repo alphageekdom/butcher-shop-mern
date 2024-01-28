@@ -55,7 +55,6 @@ const PlaceOrderScreen = () => {
               <h2>Shipping</h2>
               <strong>Address:</strong>
               <p>
-                <br />
                 {cart.shippingAddress.address} {cart.shippingAddress.address2}
                 <br />
                 {cart.shippingAddress.city}, {cart.shippingAddress.state}{' '}
@@ -88,7 +87,7 @@ const PlaceOrderScreen = () => {
                         </Col>
                         <Col>
                           <h6 className='mb-0'>Item</h6>
-                          <Link to={`/product/${item._id}`}>{item.name}</Link>
+                          <Link to={`/products/${item._id}`}>{item.name}</Link>
                         </Col>
                         <Col md={1}>
                           <h6 className='mb-0'>Qty</h6>

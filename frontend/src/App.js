@@ -5,6 +5,7 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PrivateRoute from './components/PrivateRoute';
+import AdminRoute from './components/AdminRoute';
 
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
@@ -19,6 +20,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import OrderListScreen from './screens/admin/OrderListScreen';
 
 const App = () => {
   return (
@@ -42,6 +44,14 @@ const App = () => {
                   <Route path='/placeorder' element={<PlaceOrderScreen />} />
                   <Route path='/order/:id' element={<OrderScreen />} />
                   <Route path='/profile' element={<ProfileScreen />} />
+                </Route>
+
+                {/* Admin Routes */}
+                <Route path='' element={<AdminRoute />}>
+                  <Route
+                    path='/admin/orderList'
+                    element={<OrderListScreen />}
+                  />
                 </Route>
               </Routes>
             </Container>

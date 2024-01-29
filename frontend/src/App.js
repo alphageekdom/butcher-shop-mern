@@ -62,6 +62,10 @@ const App = () => {
                     element={<ProductListScreen />}
                   />
                   <Route
+                    path='/admin/productList/:pageNumber'
+                    element={<ProductListScreen />}
+                  />
+                  <Route
                     path='/admin/product/:id/edit'
                     element={<ProductEditScreen />}
                   />

@@ -70,6 +70,7 @@ const ProductEditScreen = () => {
       toast.error(result.error);
     } else {
       toast.success('Product Updated');
+      refetch();
       navigate('/admin/productList');
     }
   };

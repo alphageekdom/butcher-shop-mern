@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
+import { HelmetProvider } from 'react-helmet-async';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PrivateRoute from './components/PrivateRoute';
@@ -29,64 +31,69 @@ import UserEditScreen from './screens/admin/UserEditScreen';
 const App = () => {
   return (
     <>
-      <PayPalScriptProvider>
-        <Router>
-          <Header />
-          <main className='py-3'>
-            <Container>
-              <Routes>
-                <Route path='/' element={<HomeScreen />} />
-                <Route path='/search/:keyword' element={<HomeScreen />} />
-                <Route path='/page/:pageNumber' element={<HomeScreen />} />
-                <Route
-                  path='/search/:keyword/page/:pageNumber'
-                  element={<HomeScreen />}
-                />
-                <Route path='/product/:id' element={<ProductScreen />} />
-                <Route path='/cart' element={<CartScreen />} />
-                <Route path='/login' element={<LoginScreen />} />
-                <Route path='/register' element={<RegisterScreen />} />
+      <HelmetProvider>
+        <PayPalScriptProvider>
+          <Router>
+            <Header />
+            <main className='py-3'>
+              <Container>
+                <Routes>
+                  <Route path='/' element={<HomeScreen />} />
+                  <Route path='/search/:keyword' element={<HomeScreen />} />
+                  <Route path='/page/:pageNumber' element={<HomeScreen />} />
+                  <Route
+                    path='/search/:keyword/page/:pageNumber'
+                    element={<HomeScreen />}
+                  />
+                  <Route path='/product/:id' element={<ProductScreen />} />
+                  <Route path='/cart' element={<CartScreen />} />
+                  <Route path='/login' element={<LoginScreen />} />
+                  <Route path='/register' element={<RegisterScreen />} />
 
-                {/* Registered User Routes */}
-                <Route path='' element={<PrivateRoute />}>
-                  <Route path='/shipping' element={<ShippingScreen />} />
-                  <Route path='/payment' element={<PaymentScreen />} />
-                  <Route path='/placeorder' element={<PlaceOrderScreen />} />
-                  <Route path='/order/:id' element={<OrderScreen />} />
-                  <Route path='/profile' element={<ProfileScreen />} />
-                </Route>
+                  {/* Registered User Routes */}
+                  <Route path='' element={<PrivateRoute />}>
+                    <Route path='/shipping' element={<ShippingScreen />} />
+                    <Route path='/payment' element={<PaymentScreen />} />
+                    <Route path='/placeorder' element={<PlaceOrderScreen />} />
+                    <Route path='/order/:id' element={<OrderScreen />} />
+                    <Route path='/profile' element={<ProfileScreen />} />
+                  </Route>
 
-                {/* Admin Routes */}
-                <Route path='' element={<AdminRoute />}>
-                  <Route
-                    path='/admin/orderList'
-                    element={<OrderListScreen />}
-                  />
-                  <Route
-                    path='/admin/productList'
-                    element={<ProductListScreen />}
-                  />
-                  <Route
-                    path='/admin/productList/:pageNumber'
-                    element={<ProductListScreen />}
-                  />
-                  <Route
-                    path='/admin/product/:id/edit'
-                    element={<ProductEditScreen />}
-                  />
-                  <Route path='/admin/userList' element={<UserListScreen />} />
-                  <Route
-                    path='/admin/user/:id/edit'
-                    element={<UserEditScreen />}
-                  />
-                </Route>
-              </Routes>
-            </Container>
-          </main>
-          <Footer />
-          <ToastContainer />
-        </Router>
-      </PayPalScriptProvider>
+                  {/* Admin Routes */}
+                  <Route path='' element={<AdminRoute />}>
+                    <Route
+                      path='/admin/orderList'
+                      element={<OrderListScreen />}
+                    />
+                    <Route
+                      path='/admin/productList'
+                      element={<ProductListScreen />}
+                    />
+                    <Route
+                      path='/admin/productList/:pageNumber'
+                      element={<ProductListScreen />}
+                    />
+                    <Route
+                      path='/admin/product/:id/edit'
+                      element={<ProductEditScreen />}
+                    />
+                    <Route
+                      path='/admin/userList'
+                      element={<UserListScreen />}
+                    />
+                    <Route
+                      path='/admin/user/:id/edit'
+                      element={<UserEditScreen />}
+                    />
+                  </Route>
+                </Routes>
+              </Container>
+            </main>
+            <Footer />
+            <ToastContainer />
+          </Router>
+        </PayPalScriptProvider>
+      </HelmetProvider>
     </>
   );
 };

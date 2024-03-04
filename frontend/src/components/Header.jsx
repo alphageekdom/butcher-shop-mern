@@ -41,7 +41,7 @@ const Header = () => {
             <Nav className='ms-auto'>
               <SearchBox />
               <LinkContainer to='/cart'>
-                <Nav.Link>
+                <Nav.Link aria-label='Shopping Cart'>
                   <FaShoppingCart />
                   {cartItems.length > 0 && (
                     <Badge pill bg='success' style={{ marginLeft: '5px' }}>

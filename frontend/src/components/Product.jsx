@@ -13,6 +13,7 @@ const Product = ({ product }) => {
           height={300}
           style={{ objectFit: 'cover' }}
           loading='lazy'
+          aria-label={product.name}
         />
       </Link>
 
